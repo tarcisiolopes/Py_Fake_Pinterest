@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>FakePinterest</title>
+    <title>
+        {% block titulo %}
+        FakePinterest
+        {% endblock %}
+    </title>
 </head>
+
+{% block body %}
 <body>
 <h1>Primeiro projeto com Flask.</h1>
 <p>Continuando.</p>
 </body>
+{% endblock %}
+
 </html>
