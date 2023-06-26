@@ -38,7 +38,7 @@ def criar_conta():
 @app.route("/perfil/<id_usuario>")
 @login_required
 def perfil(id_usuario):
-    if int(id_usuario) == int(current_user):
+    if int(id_usuario) == int(current_user.id):
         return render_template("perfil.html", usuario=current_user)
     else:
         usuario = Usuario.query.get(int(id_usuario))
