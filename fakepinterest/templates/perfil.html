@@ -6,6 +6,7 @@ Perfil - {{ usuario.username }}
 
 {% block body %}
 <body>
+{% include "navbar.html" %}
 
 <h1>Perfil do usuário: {{ usuario.username }}</h1>
 
@@ -18,8 +19,6 @@ Perfil - {{ usuario.username }}
 
 </form>
 {% endif %}
-
-<a href="{{ url_for('logout') }}">Sair</a>
 
 {% for foto in usuario.fotos %}
 <img src="{{ url_for('static', filename='fotos_post/{}'.format(foto.imagem)) }}">
